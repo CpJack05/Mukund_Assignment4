@@ -12,8 +12,8 @@
 <body>
     <nav class="navbar">
         <ul>
-          <li><a href="/">Online Grocery Store</a></li>
-          <li><a href="/AllOrders">ALL ORDERS</a></li>
+          <li><a href="/">Grocery Store</a></li>
+          <li><a href="/AllOrders">All Orders</a></li>
         </ul>
         </nav>
         <section>
@@ -22,11 +22,10 @@
                     <tr>
                          <th>Name</th>
                          <th>Email</th>
-                         <th>phone Number</th>
+                         <th>Phone Number</th>
                          <th>Address</th>
                          <th>City</th>
                          <th>Province</th>
-                         <th>Postal Code</th>
                          <th>Bread</th>
                          <th>Milk </th>
                          <th>Softdrink</th>
@@ -36,6 +35,26 @@
                      </tr>
                 </thead>
                 <tbody>
+                    <%
+                 for(var order of orders){
+                     %>
+                         <tr>
+                             <td><%= order.name %></td>
+                             <td><%= order.email %></td>
+                             <td><%= order.phonenumber %></td>
+                             <td><%= order.address %></td> 
+                             <td><%= order.city %></td>
+                             <td><%= order.province %></td>
+                             <td>$ <%= order.breadCharge %></td>
+                             <td>$ <%= order.milkCharge %></td>
+                             <td>$ <%= order.softdrinkCharge %></td>
+                             <td>$ <%= order.subTotal.toFixed(2) %></td>
+                             <td>$ <%= order.taxAmount.toFixed(2) %></td>
+                             <td>$ <%= order.totalAmount.toFixed(2) %></td>
+                        </tr>
+                     <%
+                 }
+             %>
                 </tbody>
             </table>
          </section>
