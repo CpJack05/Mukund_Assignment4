@@ -235,6 +235,12 @@ myApp.post('/', [
     }
 });
 
+// All orders page
+myApp.get('/AllOrders', function(req, res){
+    Order.find({}).exec(function(err, orders){
+        res.render('AllOrders', {orders:orders});
+    });
+});
 
 // start the server and listen at a port
 myApp.listen(4040);
