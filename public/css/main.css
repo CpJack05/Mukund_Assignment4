@@ -83,3 +83,34 @@ input[type="reset"]{
 th{
     width: 500px;
 }
+
+.navbar{
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px #2c2c2c;
+    color: white;
+    border-radius: 10px;
+    margin: 2em 22em;
+}
+
+.navbar ul{
+    list-style-type: none;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar ul li{
+    display: inline-block;
+    width: 200px;
+}
+
+.navbar ul li:hover{
+    background-color: rgb(194, 187, 187);
+}
+.navbar ul li a{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
