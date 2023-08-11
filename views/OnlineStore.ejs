@@ -61,5 +61,80 @@
       <p id="errors"></p>
     </div>
   </form>
+
+  <h2 id="title">GROCERY SHOPPING INVOICE</h2>
+  <div class="formData">
+    <% if(typeof(errors) !='undefined' )
+    { for(var error of errors)
+      { %>
+      <p class="error">
+        <%=error.msg %>
+      </p>
+      <% } } %>
+
+        <% if(typeof(totalAmount) !='undefined' ){ %>
+          <p id="formResult"><u><b>Your Receipt:</b></u></p>
+          <table>
+            <tr>
+              <th>NAME : <br><br></th>
+              <td>
+                <%= name %> <br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>EMAIL : <br><br></th>
+              <td>
+                <%= email %> <br><br>
+              </td>
+            </tr>
+            <tr>
+                <th>PHONE NUMBER : <br><br></th>
+                <td>
+                  <%= phonenumber %> <br><br>
+                </td>
+              </tr>
+            <tr>
+              <th>ADDRESS :<br><br> </th>
+              <td>
+                <%= address %>, <%= city %>, <%= province %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>BREADS @ $2.5 :<br><br> </th>
+              <td>
+                <%= breadCharge.toFixed(2) %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>MILK @ $7 :<br><br> </th>
+              <td>
+                <%= milkCharge.toFixed(2) %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>SOFT-DRINKS @ $3.5 :<br><br> </th>
+              <td>
+                <%= softdrinkCharge.toFixed(2) %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>SUB TOTAL :<br><br></th>
+              <td>$<%= subTotal.toFixed(2) %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>Tax :<br><br> </th>
+              <td>$<%= taxAmount.toFixed(2) %><br><br>
+              </td>
+            </tr>
+            <tr>
+              <th>Total : </th>
+              <td>$<%= totalAmount.toFixed(2) %>
+              </td>
+            </tr>
+          </table>
+          <% } %>
+  </div>
+
 </body>
 </html>
