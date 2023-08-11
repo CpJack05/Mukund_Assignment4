@@ -1,0 +1,85 @@
+body{
+    background-color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px; 
+    color: black;
+}
+
+#title{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#errors{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+}
+form, .formData{
+    width: 500px;
+    border: 3px solid black;
+    padding: 30px;
+    margin: 50px auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+}
+label{
+    width: 200px;
+    display: inline-block;
+    font-size: 18px;
+    color:black;
+}
+input:not([type="radio"]), select{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 10px;
+    right: 0px;
+    
+}
+input:not([type="radio"]){
+    width: 260px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+select{
+    width: 283px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    padding: 10px;
+    height: 50px;
+    border-radius: 4px;
+}
+input[type="reset"]{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    padding: 10px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+th{
+    width: 500px;
+}
