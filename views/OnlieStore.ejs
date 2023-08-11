@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Online Grocery Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+  <h2 id="title">ONLINE GROCERY STORE</h2>
+  <form name="onlinestore" method="Post" action="">
+    <div id="form">
+      <label>NAME :</label>
+      <input id="name" type="text" name="name" ><br />
+
+      <label>EMAIL :</label>
+      <input id="email" type="text" name="email" ><br />
+
+      <label>PHONE NUMBER :</label>
+      <input id="phonenumber" type="text" name="phonenumber" ><br />
+
+      <label>ADDRESS :</label>
+      <input id="address" type="text" name="address" ><br />
+
+      <label>CITY :</label>
+      <input id="city" type="text" name="city" ><br />
+
+      <label>PROVINCE :</label>
+      <select name="province" id="province">
+        <option value="">----- Select -----</option>
+        <option value="ALBERTA (AB)">ALBERTA (AB)</option>
+        <option value="BRITISH COLUMBIA (BC)">BRITISH COLUMBIA (BC)</option>
+        <option value="MANITOBA (MB)">MANITOBA (MB)</option>
+        <option value="NEW BRUNSWICK (NB)">NEW BRUNSWICK (NB)</option>
+        <option value="NEWFOUNDLAND AND LABRADOR (NL)">NEWFOUNDLAND AND LABRADOR (NL)</option>
+        <option value="NORTHWEST TERRITORIES (NT)">NORTHWEST TERRITORIES (NT)</option>
+        <option value="NOVA SCOTIA (NS)">NOVA SCOTIA (NS)</option>
+        <option value="NUNAVUT (NV)">NUNAVUT (NW)</option>
+        <option value="ONTARIO (ON)">ONTARIO (ON)</option>
+        <option value="PRINCE EDWARD ISLAND (PE)">PRINCE EDWARD ISLAND (PE)</option>
+        <option value="QUEBEC (QC)">QUEBEC (QC)</option>
+        <option value="SASKATCHEWAN (SK)">SASKATCHEWAN (SK)</option>
+        <option value="YUKON (YK)">YUKON (YK)</option>
+      </select><br />
+
+      <label>BREADS :</label>
+      <input id="bread" placeholder="Please enter Number Only" type="text" name="bread"><br />
+
+      <label>MILK :</label>
+      <input id="milk" placeholder="Please enter Number Only" type="text" name="milk"><br />
+
+      <label>SOFT DRINKS:</label>
+      <input id="softdrink" placeholder="Please enter Number Only" type="text" name="softdrink"><br />
+
+      <input type="reset" value="RESET">
+      <input type="submit" value="PLACE ORDER">
+      <p id="errors"></p>
+    </div>
+  </form>
+</body>
+</html>
