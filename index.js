@@ -18,6 +18,30 @@ myApp.use(express.static(__dirname + '/public'));
 myApp.set('view engine', 'ejs');
 // set up different routes (pages) of the website
 
+// setting up Mongo DB
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/GroceryStoreDB', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+// Order model 
+const Order = mongoose.model('Order', {
+    name: String,
+    email: String,
+    address: String,
+    phoneNumber: String,
+    city: String,
+    province: String,
+    postalcode: String,
+    milkCharge: Number,
+    breadCharge: Number,
+    softdrinkCharge: Number,
+    subTotal: Number,
+    taxAmount: Number,
+    totalAmount: Number
+});
+
 //home page
 myApp.get('/', function (req, res) {
     res.render('OnlineStore'); // no need to add .ejs to the file name
@@ -201,6 +225,12 @@ myApp.post('/', [
             taxAmount: taxAmount,
             totalAmount: totalAmount
         }
+        
+        var myOrder = new Order(pageData);
+        myOrder.save().then( function(){
+            console.log('New order created');
+        });
+
         res.render('OnlineStore', pageData);
     }
 });
